@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/baidu/StudioProjects/recycleview/RecycleFeed/CommonUi/build/intermediates/res/merged/androidTest/debug/anim/dx_slide_right_over.xml",
+        "source": "/Users/baidu/StudioProjects/recycleview/RecycleFeed/CommonUi/build/intermediates/bundles/debug/res/anim/dx_slide_right_over.xml"
+    },
+    {
+        "merged": "/Users/baidu/StudioProjects/recycleview/RecycleFeed/CommonUi/build/intermediates/res/merged/androidTest/debug/anim/dx_exit_anim.xml",
+        "source": "/Users/baidu/StudioProjects/recycleview/RecycleFeed/CommonUi/build/intermediates/bundles/debug/res/anim/dx_exit_anim.xml"
+    },
+    {
+        "merged": "/Users/baidu/StudioProjects/recycleview/RecycleFeed/CommonUi/build/intermediates/res/merged/androidTest/debug/anim/dx_push_up_in.xml",
+        "source": "/Users/baidu/StudioProjects/recycleview/RecycleFeed/CommonUi/build/intermediates/bundles/debug/res/anim/dx_push_up_in.xml"
+    },
+    {
+        "merged": "/Users/baidu/StudioProjects/recycleview/RecycleFeed/CommonUi/build/intermediates/res/merged/androidTest/debug/anim/dx_enter_anim.xml",
+        "source": "/Users/baidu/StudioProjects/recycleview/RecycleFeed/CommonUi/build/intermediates/bundles/debug/res/anim/dx_enter_anim.xml"
+    },
+    {
+        "merged": "/Users/baidu/StudioProjects/recycleview/RecycleFeed/CommonUi/build/intermediates/res/merged/androidTest/debug/anim/dx_titlebar_loading.xml",
+        "source": "/Users/baidu/StudioProjects/recycleview/RecycleFeed/CommonUi/build/intermediates/bundles/debug/res/anim/dx_titlebar_loading.xml"
+    }
+]

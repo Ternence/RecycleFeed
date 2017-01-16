@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!-- pure white (#C4)-->
+    <color name="common_white">#ffffff</color>
+    <color name="common_white_alpha_97">#f7ffffff</color>
+    <color name="common_white_alpha_90">#e5ffffff</color>
+    <color name="common_white_alpha_80">#ccffffff</color>
+    <color name="common_white_alpha_75">#bfffffff</color>
+    <color name="common_white_alpha_70">#b3ffffff</color>
+    <color name="common_white_alpha_60">#99ffffff</color>
+    <!-- 54% alpha white (#C5)-->
+    <color name="common_white_alpha_54">#8affffff</color>
+    <color name="common_white_alpha_50">#7fffffff</color>
+    <color name="common_white_alpha_40">#66ffffff</color>
+    <color name="common_white_alpha_30">#54ffffff</color>
+    <color name="common_white_alpha_20">#33ffffff</color>
+    <color name="common_white_alpha_18">#2dffffff</color>
+    <color name="common_white_alpha_10">#0affffff</color>
+    <color name="common_white_alpha_06">#06ffffff</color>
+    <color name="common_white_alpha_00">#00ffffff</color>
+    <color name="common_white_disabled">#e7e7e7</color>
+    <color name="common_white_bkg_normal">@color/common_white</color>
+    <color name="common_white_bkg_pressed">@color/common_10_percent_transparent</color>
+    <color name="common_white_bkg_disabled">#4ce0ebf1</color>
+
+    <!-- For main texts (#C1) -->
+    <color name="common_dark">#000000</color>
+    <color name="common_dark_disabled">#9aa7af</color>
+    <color name="common_dark_alpha_80">#cc000000</color>
+    <color name="common_dark_alpha_60">#99000000</color>
+    <color name="common_dark_alpha_10">#19000000</color>
+    <color name="common_dark_alpha_07">#11000000</color>
+
+    <!-- For main texts (#C2) -->
+    <color name="common_dark_grey">#8a000000</color>
+    <!-- For secondary texts (#C3) -->
+    <color name="common_grey">#4c000000</color>
+    <color name="common_light_grey">#cdcdcd</color>
+    <color name="common_grey_disabled">#aabbc4</color>
+
+    <!-- Common red (#CR) -->
+    <color name="common_red">#e75050</color>
+    <color name="common_red_alpha_75">#bfe64e4b</color>
+    <color name="common_red_bkg_pressed">#80e13364</color>
+    <color name="common_red_bkg_disabled">#4ce13364</color>
+    <!-- For warning cases. -->
+    <color name="common_red_tips">#ef2620</color>
+    <color name="common_red_tips_homepage">#f2ef2620</color>
+
+    <!-- deprecated.For warning cases -->
+    <color name="common_yellow">#f7ad08</color>
+
+    <!-- For safe cases (#CG) -->
+    <color name="common_green">#79c575</color>
+    <!-- For safe cases -->
+    <color name="common_green_special">@color/common_green</color>
+    <color name="common_green_bkg_pressed">#8077c40a</color>
+    <color name="common_green_bkg_disabled">#4c77c40a</color>
+    <color name="common_green_tips">@color/common_green</color>
+
+    <!-- Common blue (#CB) -->
+    <color name="common_blue">#1545a4</color>
+    <color name="common_blue_bkg_pressed">#804389c5</color>
+    <color name="common_blue_bkg_disabled">#4c4389c5</color>
+    <color name="common_light_blue">#d3e5ee</color>
+    <!-- For emphasize important information -->
+    <color name="common_blue_tips">#1b58c2</color>
+    <color name="common_blue_tips_homepage">#f25697ff</color>
+    <color name="common_blue_alpha_15">#26ffffff</color>
+    <color name="common_blue_alpha_20">#334185f2</color>
+
+    <color name="common_half_transparent">#b0000000</color>
+    <color name="common_10_percent_transparent">#0a000000</color>
+    <color name="common_20_percent_transparent">#33000000</color>
+    <color name="common_70_percent_transparent">#b2000000</color>
+    <color name="common_80_percent_transparent">#cc000000</color>
+    <color name="common_90_percent_transparent">#e6000000</color>
+
+    <color name="common_screen_fg_color">#ffffff</color>
+    <color name="common_screen_bkg_color">#f5f5f5</color>
+    <color name="common_screen_bkg_cache_color">#00000000</color>
+    <color name="common_screen_card_bkg_color">@color/common_screen_bkg_color</color>
+    <color name="common_screen_bkg_color_1">#f3f8ff</color>
+    <color name="common_titlebar_bkg_color">@color/common_blue</color>
+    <color name="common_titlebar_bkg_pressed_color">#20000000</color>
+    <color name="common_divider_color">#19000000</color>
+    <color name="common_stroke_color">@color/common_divider_color</color>
+    <color name="common_page_viewer_margin_color">@color/common_divider_color</color>
+    <color name="common_list_header_bkg_color">#fafaff</color>
+    <color name="common_list_item_bkg_pressed_color">@color/common_10_percent_transparent</color>
+    <color name="common_bottombtn_bkg_pressed_color">#dcebf4</color>
+    <color name="common_bottombtn_bkg_pressed_color_alpha_90">#e5dcebf4</color>
+    <color name="common_dialog_bkg_color">@color/common_white</color>
+    <color name="common_loading_text_color">@color/common_blue</color>
+    <color name="common_reveal_circle_color">#1b000000</color>
+    <color name="common_card_border_color">#f0f0f0</color>
+
+    <color name="common_tab_indicator_footer_color">#ff7272</color>
+    <color name="common_tab_indicator_text_selected">@color/common_white</color>
+    <color name="common_tab_indicator_text_unselected">@color/common_white_alpha_50</color>
+
+    <color name="common_spring_style_background">#f403475d</color>
+    <color name="common_summer_style_background">#f4035181</color>
+    <color name="common_fall_style_background">#f4412155</color>
+    <color name="common_winter_style_background">#f40f336e</color>
+    <color name="welcome_activity_text_color">#92bcff</color>
+</resources>

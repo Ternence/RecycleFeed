@@ -1,0 +1,34 @@
+apply plugin: 'com.android.library'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+}
+
+ext.supportLibVersion = '25.1.0'
+
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        buildConfigField("boolean", "DEBUG_LOG", rootProject.ext.DEBUG_LOG)
+    }
+
+    lintOptions {
+        textReport true
+        textOutput 'stdout'
+
+        abortOnError true
+        checkReleaseBuilds true
+        warningsAsErrors true
+        fatal 'NewApi', 'InlinedApi', 'MissingRegistered'
+
+        disable 'OldTargetApi','AllowBackup','ContentDescription'
+        disable 'SpUsage','IconMissingDensityFolder','IconDensities','InflateParams'
+        disable 'Overdraw','UseCompoundDrawables','DefaultLocale'
+        disable 'UnusedResources'
+        disable 'MyToastHelper'
+    }
+}

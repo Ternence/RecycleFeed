@@ -12,6 +12,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dianxinos.optimizer.view.FourThreeLinearLayout;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,9 +28,9 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     public static final int REQUEST_CODE_VIEW_SHOT = 5407;
 
-    private static final int TYPE_TREASURE_HOME_ITEM = 0;
-    private static final int TYPE_DRIBBBLE_SHOT = 1;
-    private static final int TYPE_PRODUCT_HUNT_POST = 2;
+    private static final int TYPE_TREASURE = 0;
+    private static final int TYPE_TOP_THREE_TREASURE = 1;
+    private static final int TYPE_HOME_CARD = 2;
     private static final int TYPE_LOADING_MORE = -1;
 
     // we need to hold on to an activity ref for the shared element transitions :/
@@ -56,14 +58,14 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         switch (viewType) {
-            case TYPE_TREASURE_HOME_ITEM:
+            case TYPE_TREASURE:
                 return createTreasureHolder(parent);
-//            case TYPE_DRIBBBLE_SHOT:
+//            case TYPE_TOP_THREE_TREASURE:
 //                return createDribbbleShotHolder(parent);
-//            case TYPE_PRODUCT_HUNT_POST:
-//                return createProductHuntStoryHolder(parent);
+            case TYPE_HOME_CARD:
+                return createHomeCardHolder(parent);
 //            case TYPE_LOADING_MORE:
-//                return new LoadingMoreHolder(layoutInflater.inflate(R.layout.infinite_loading, parent, false));
+//                return flag_new LoadingMoreHolder(layoutInflater.inflate(R.layout.infinite_loading, parent, false));
         }
         return null;
     }
@@ -71,20 +73,38 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         switch (getItemViewType(position)) {
-            case TYPE_TREASURE_HOME_ITEM:
-                bindTreasureData((TreasureBean) getItem(position), (HomeTreasureHolder) holder);
+            case TYPE_TREASURE:
+                bindTreasureHolder((TreasureBean) getItem(position), (HomeTreasureHolder) holder);
                 break;
-//            case TYPE_DRIBBBLE_SHOT:
+//            case TYPE_TOP_THREE_TREASURE:
 //                bindDribbbleShotHolder(
 //                        (Shot) getItem(position), (DribbbleShotHolder) holder, position);
 //                break;
-//            case TYPE_PRODUCT_HUNT_POST:
-//                bindProductHuntPostView((Post) getItem(position), (ProductHuntStoryHolder) holder);
-//                break;
+            case TYPE_HOME_CARD:
+                buildHomeCardHolder((HomeCardBean) getItem(position), (HomeCardHolder) holder);
+                break;
 //            case TYPE_LOADING_MORE:
 //                bindLoadingViewHolder((LoadingMoreHolder) holder, position);
 //                break;
         }
+    }
+
+
+    private void bindTreasureHolder(final TreasureBean bean, final HomeTreasureHolder holder) {
+        holder.title.setText(bean.title);
+        holder.title.setAlpha(1f); // interrupted add to pocket anim can mangle
+        holder.imageView.setImageResource(R.drawable.treasure_box_icon_home_appmgr);
+
+        holder.itemView.setTransitionName(bean.url);
+    }
+
+    private void buildHomeCardHolder(HomeCardBean item, HomeCardHolder holder) {
+        holder.title.setText(item.title);
+        holder.content.setText("content: " + item.title);
+
+        holder.layout.setBackgroundResource(R.color.common_blue_alpha_20);
+        holder.itemView.setTransitionName(item.url);
+
     }
 
     /**
@@ -127,21 +147,37 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         return holder;
     }
 
-    private void bindTreasureData(final TreasureBean bean, final HomeTreasureHolder holder) {
-        holder.title.setText(bean.title);
-        holder.title.setAlpha(1f); // interrupted add to pocket anim can mangle
-        holder.itemView.setTransitionName(bean.url);
+
+    private HomeCardHolder createHomeCardHolder(ViewGroup parent) {
+
+        final HomeCardHolder holder = new HomeCardHolder(layoutInflater.inflate(
+                R.layout.home_treasure_function_card_holder, parent, false));
+//        holder.itemView.setOnClickListener(
+//                new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        final TreasureBean treasureBean = (TreasureBean) getItem(holder.getAdapterPosition());
+//                    }
+//                }
+//        );
+//        holder.imageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View commentsView) {
+//                Toast.makeText(mActivity, "ImageView Click",Toast.LENGTH_SHORT).show();
+//            }
+//        });
+        return holder;
     }
 
   /*  @NonNull
     private DribbbleShotHolder createDribbbleShotHolder(ViewGroup parent) {
-        final DribbbleShotHolder holder = new DribbbleShotHolder(
+        final DribbbleShotHolder holder = flag_new DribbbleShotHolder(
                 layoutInflater.inflate(R.layout.dribbble_shot_item, parent, false));
         holder.image.setBadgeColor(initialGifBadgeColor);
-        holder.image.setOnClickListener(new View.OnClickListener() {
+        holder.image.setOnClickListener(flag_new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent();
+                Intent intent = flag_new Intent();
                 intent.setClass(mActivity, DribbbleShot.class);
                 intent.putExtra(DribbbleShot.EXTRA_SHOT,
                         (Shot) getItem(holder.getAdapterPosition()));
@@ -155,7 +191,7 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             }
         });
         // play animated GIFs whilst touched
-        holder.image.setOnTouchListener(new View.OnTouchListener() {
+        holder.image.setOnTouchListener(flag_new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 // check if it's an event we care about, else bail fast
@@ -203,7 +239,7 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         final int[] imageSize = shot.images.bestSize();
         Glide.with(mActivity)
                 .load(shot.images.best())
-                .listener(new RequestListener<String, GlideDrawable>() {
+                .listener(flag_new RequestListener<String, GlideDrawable>() {
 
                     @Override
                     public boolean onResourceReady(GlideDrawable resource,
@@ -213,22 +249,22 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                                                    boolean isFirstResource) {
                         if (!shot.hasFadedIn) {
                             holder.image.setHasTransientState(true);
-                            final ObservableColorMatrix cm = new ObservableColorMatrix();
+                            final ObservableColorMatrix cm = flag_new ObservableColorMatrix();
                             final ObjectAnimator saturation = ObjectAnimator.ofFloat(
                                     cm, ObservableColorMatrix.SATURATION, 0f, 1f);
-                            saturation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener
+                            saturation.addUpdateListener(flag_new ValueAnimator.AnimatorUpdateListener
                                     () {
                                 @Override
                                 public void onAnimationUpdate(ValueAnimator valueAnimator) {
                                     // just animating the color matrix does not invalidate the
                                     // drawable so need this update listener.  Also have to create a
-                                    // new CMCF as the matrix is immutable :(
-                                    holder.image.setColorFilter(new ColorMatrixColorFilter(cm));
+                                    // flag_new CMCF as the matrix is immutable :(
+                                    holder.image.setColorFilter(flag_new ColorMatrixColorFilter(cm));
                                 }
                             });
                             saturation.setDuration(2000L);
                             saturation.setInterpolator(getFastOutSlowInInterpolator(mActivity));
-                            saturation.addListener(new AnimatorListenerAdapter() {
+                            saturation.addListener(flag_new AnimatorListenerAdapter() {
                                 @Override
                                 public void onAnimationEnd(Animator animation) {
                                     holder.image.clearColorFilter();
@@ -251,7 +287,7 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                 .diskCacheStrategy(DiskCacheStrategy.SOURCE)
                 .fitCenter()
                 .override(imageSize[0], imageSize[1])
-                .into(new DribbbleTarget(holder.image, false));
+                .into(flag_new DribbbleTarget(holder.image, false));
         // need both placeholder & background to prevent seeing through shot as it fades in
         holder.image.setBackground(
                 shotLoadingPlaceholders[position % shotLoadingPlaceholders.length]);
@@ -262,26 +298,26 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     @NonNull
     private ProductHuntStoryHolder createProductHuntStoryHolder(ViewGroup parent) {
-        final ProductHuntStoryHolder holder = new ProductHuntStoryHolder(
+        final ProductHuntStoryHolder holder = flag_new ProductHuntStoryHolder(
                 layoutInflater.inflate(R.layout.product_hunt_item, parent, false));
-        holder.comments.setOnClickListener(new View.OnClickListener() {
+        holder.comments.setOnClickListener(flag_new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CustomTabActivityHelper.openCustomTab(
                         mActivity,
-                        new CustomTabsIntent.Builder()
+                        flag_new CustomTabsIntent.Builder()
                                 .setToolbarColor(ContextCompat.getColor(mActivity, R.color.product_hunt))
                                 .addDefaultShareMenuItem()
                                 .build(),
                         Uri.parse(((Post) getItem(holder.getAdapterPosition())).discussion_url));
             }
         });
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(flag_new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CustomTabActivityHelper.openCustomTab(
                         mActivity,
-                        new CustomTabsIntent.Builder()
+                        flag_new CustomTabsIntent.Builder()
                                 .setToolbarColor(ContextCompat.getColor(mActivity, R.color.product_hunt))
                                 .addDefaultShareMenuItem()
                                 .build(),
@@ -309,12 +345,12 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         if (position < getDataItemCount() && getDataItemCount() > 0) {
             HomeItem item = getItem(position);
             if (item instanceof TreasureBean) {
-                return TYPE_TREASURE_HOME_ITEM;
-            } /*else if (item instanceof Shot) {
-                return TYPE_DRIBBBLE_SHOT;
-            } else if (item instanceof Post) {
-                return TYPE_PRODUCT_HUNT_POST;
-            }*/
+                return TYPE_TREASURE;
+            } else if (item instanceof TopThreeTreasureBean) {
+                return TYPE_TOP_THREE_TREASURE;
+            } else if (item instanceof HomeCardBean) {
+                return TYPE_HOME_CARD;
+            }
         }
         return TYPE_LOADING_MORE;
     }
@@ -412,7 +448,7 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         return showLoadingMore ? getItemCount() - 1 : RecyclerView.NO_POSITION;
     }
 
-//        return new Class[] { DesignerNewsStoryHolder.class, ProductHuntStoryHolder.class };
+//        return flag_new Class[] { DesignerNewsStoryHolder.class, ProductHuntStoryHolder.class };
 
     @Override
     public void dataStartedLoading() {
@@ -431,9 +467,9 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     static class HomeTreasureHolder extends RecyclerView.ViewHolder {
 
-        @BindView(R.id.textView2)
+        @BindView(R.id.item_title)
         TextView title;
-        @BindView(R.id.imageView)
+        @BindView(R.id.item_img)
         ImageView imageView;
 
         HomeTreasureHolder(View itemView) {
@@ -467,5 +503,20 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             progress = (ProgressBar) itemView;
         }
 
+    }
+
+    static class HomeCardHolder extends RecyclerView.ViewHolder{
+        @BindView(R.id.function_card_title)
+        TextView title;
+        @BindView(R.id.function_card_content)
+        TextView content;
+        @BindView(R.id.function_card_background)
+        FourThreeLinearLayout layout;
+
+
+        public HomeCardHolder(View itemView) {
+            super(itemView);
+            ButterKnife.bind(this, itemView);
+        }
     }
 }

@@ -47,18 +47,16 @@ public abstract class FeedDataManager extends BaseDataManager<HomeItem> implemen
         data.add(new TreasureBean(3," 3 ", "  "));
         data.add(new TreasureBean(4," 4 ", "  "));
         data.add(new TreasureBean(5," 5 ", "  "));
-        data.add(new TreasureBean(6," 6 ", "  "));
-        data.add(new TreasureBean(7," 7 ", "  "));
-        data.add(new TreasureBean(7," 7 ", "  "));
-        data.add(new TreasureBean(7," 7 ", "  "));
-        data.add(new TreasureBean(7," 7 ", "  "));
-        data.add(new TreasureBean(7," 7 ", "  "));
-        data.add(new TreasureBean(7," 7 ", "  "));
-        data.add(new TreasureBean(7," 7 ", "  "));
-        data.add(new TreasureBean(7," 7 ", "  "));
-        data.add(new TreasureBean(7," 7 ", "  "));
-        data.add(new TreasureBean(7," 7 ", "  "));
-        data.add(new TreasureBean(7," 7 ", "  "));
+        data.add(new HomeCardBean(7," 7HomeCardBean ", "  "));
+        data.add(new HomeCardBean(7," 7HomeCardBean ", "  "));
+        data.add(new HomeCardBean(7," 7HomeCardBean ", "  "));
+        data.add(new HomeCardBean(7," 7HomeCardBean ", "  "));
+        data.add(new HomeCardBean(7," 7HomeCardBean ", "  "));
+        data.add(new HomeCardBean(7," 7HomeCardBean ", "  "));
+        data.add(new HomeCardBean(7," 7HomeCardBean ", "  "));
+        data.add(new HomeCardBean(7," 7HomeCardBean ", "  "));
+        data.add(new HomeCardBean(7," 7HomeCardBean ", "  "));
+        data.add(new HomeCardBean(7," 7HomeCardBean ", "  "));
 
         onDataLoaded(data);
 

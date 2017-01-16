@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 //        grid.addOnScrollListener(toolbarElevation);
-//        grid.addOnScrollListener(new InfiniteScrollListener(layoutManager, dataManager) {
+//        grid.addOnScrollListener(flag_new InfiniteScrollListener(layoutManager, dataManager) {
 //            @Override
 //            public void onLoadMore() {
 //                dataManager.loadAllDataSources();
