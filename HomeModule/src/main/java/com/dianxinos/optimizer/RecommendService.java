@@ -9,7 +9,12 @@ import retrofit2.http.Query;
  */
 public interface RecommendService {
 
-    //todo Invisible for public.
     public static final String SERVICE = "";
 
+    @GET("/_omp/card/1.0/index?")
+    Call<RecommendBean> getRecommendIndex();
+
+
+    @GET("/_omp/card/1.0/detail?")
+    Call<RecommendDetailsBean> getRecommendDetails();
 }

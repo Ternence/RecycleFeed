@@ -7,6 +7,7 @@ public class HomeItem {
 
     public int id;
     public String title;
+    public String content;
     public String url; // can't be final as some APIs use different serialized names
     public String dataSource;
     public int page;

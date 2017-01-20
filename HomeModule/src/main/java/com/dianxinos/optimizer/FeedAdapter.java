@@ -97,7 +97,7 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     private void buildHomeCardHolder(FeedBean item, HomeCardHolder holder) {
         holder.title.setText(item.title);
-        holder.content.setText("content: " + item.title);
+        holder.content.setText(item.content);
 
         holder.layout.setBackgroundResource(R.color.common_blue_alpha_20);
         holder.itemView.setTransitionName(item.url);
