@@ -11,14 +11,24 @@ import android.util.Log;
 
 import com.dianxinos.optimizer.recycle.HorizontalDividerItemDecoration;
 
+import java.io.IOException;
 import java.util.List;
 
 import butterknife.BindInt;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import jp.wasabeef.recyclerview.animators.FadeInAnimator;
+import jp.wasabeef.recyclerview.animators.SlideInLeftAnimator;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final int COLUMN_ONE = 1;
+    private static final int COLUMN_THREE = 3;
 
     private static final String TAG = "MainActivity";
     @BindView(R.id.grid)
@@ -58,35 +68,25 @@ public class MainActivity extends AppCompatActivity {
         layoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {
-                Log.i(TAG, "getSpanSize: pos " + position);
-                if (position < 6) {
-                    // TODO:  根据百宝箱添加的 beans 个数进行配置 header （需要填充空 bean）
-                    return 1;
+                if (position < adapter.getTreasureCount()) {
+                    return COLUMN_ONE;
                 } else {
-                    return 3;
+                    return COLUMN_THREE;
                 }
             }
         });
-//        grid.addOnScrollListener(toolbarElevation);
-//        grid.addOnScrollListener(flag_new InfiniteScrollListener(layoutManager, dataManager) {
-//            @Override
-//            public void onLoadMore() {
-//                dataManager.loadAllDataSources();
-//            }
-//        });
         grid.addItemDecoration(new HorizontalDividerItemDecoration.Builder(this)
                 .color(Color.TRANSPARENT)
                 .sizeResId(R.dimen.divider_treasure_bean_height)
                 .build());
 
-        grid.setItemAnimator(new DefaultItemAnimator());
+        grid.setItemAnimator(new FadeInAnimator());
 
         layoutManager.setSmoothScrollbarEnabled(true);
         layoutManager.setAutoMeasureEnabled(true);
         grid.setLayoutManager(layoutManager);
         grid.setHasFixedSize(true);
         grid.setNestedScrollingEnabled(false);
-
 
         //start load data .
         dataManager.loadAllDataSources();

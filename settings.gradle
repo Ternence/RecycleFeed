@@ -1,1 +1,1 @@
-include ':HomeModule', ':CommonUi'
+include ':HomeModule'
