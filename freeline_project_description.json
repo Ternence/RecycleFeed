@@ -1,0 +1,124 @@
+{
+    "android_gradle_plugin_version": "2.2.3",
+    "apk_path": "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/build/outputs/apk/HomeModule-debug.apk",
+    "apt": {
+        "HomeModule": {
+            "aptArgs": [
+                
+            ],
+            "aptOutput": "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/build/generated/source/apt/debug",
+            "disableDiscovery": false,
+            "enabled": true,
+            "processor": null,
+            "processorPath": "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/build/intermediates/exploded-aar/com.android.support/design/25.1.0/jars/classes.jar:/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/build/intermediates/exploded-aar/com.android.support/transition/25.1.0/jars/classes.jar:/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar:/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/build/intermediates/exploded-aar/jp.wasabeef/recyclerview-animators/2.2.5/jars/classes.jar:/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/jars/classes.jar:/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar:/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/jars/classes.jar:/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar:/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar:/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar:/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar:/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.0/jars/classes.jar:/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar:/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar:/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/build/intermediates/exploded-aar/com.antfortune.freeline/runtime/0.8.5/jars/classes.jar:/Users/baidu/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar:/Users/baidu/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.4.0/ea392375cf9ff59234a82e7928a204215ccc98cd/butterknife-annotations-8.4.0.jar:/Users/baidu/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar:/Users/baidu/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar:/Users/baidu/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.2/ccde00f7ccc77af5a6d5752e2cb21f6d8998289f/okhttp-3.4.2.jar:/Users/baidu/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar:/Users/baidu/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar:/Users/baidu/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/c4ba5371a29ac9b2ad6129b1d39ea38750043eff/gson-2.8.0.jar:/Users/baidu/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar:/Users/baidu/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-compiler/8.4.0/22f40cd3f01849c6deeab0a755d2082b2624581/butterknife-compiler-8.4.0.jar:/Users/baidu/Library/Android/sdk/extras/android/m2repository/com/android/support/appcompat-v7/25.1.0/appcompat-v7-25.1.0.aar:/Users/baidu/Library/Android/sdk/extras/android/m2repository/com/android/support/design/25.1.0/design-25.1.0.aar:/Users/baidu/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/8.4.0/6c39334929311ff90a06c67ca310db1342fe2b6a/butterknife-8.4.0.aar:/Users/baidu/.gradle/caches/modules-2/files-2.1/jp.wasabeef/recyclerview-animators/2.2.5/8967c22a560ce93f0e2489440beac76556f1d43a/recyclerview-animators-2.2.5.aar:/Users/baidu/.gradle/caches/modules-2/files-2.1/com.google.auto/auto-common/0.6/cf7212b0f8bfef12657b942df8f4f2cf032d3f41/auto-common-0.6.jar:/Users/baidu/.gradle/caches/modules-2/files-2.1/com.google.auto.service/auto-service/1.0-rc2/51033a5b8fcf7039159e35b6878f106ccd5fb35f/auto-service-1.0-rc2.jar:/Users/baidu/.gradle/caches/modules-2/files-2.1/com.squareup/javapoet/1.7.0/4fdcf1fc27c1a8f55d1109df986c923152f07759/javapoet-1.7.0.jar:/Users/baidu/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/25.1.0/support-v4-25.1.0.aar:/Users/baidu/Library/Android/sdk/extras/android/m2repository/com/android/support/support-vector-drawable/25.1.0/support-vector-drawable-25.1.0.aar:/Users/baidu/Library/Android/sdk/extras/android/m2repository/com/android/support/animated-vector-drawable/25.1.0/animated-vector-drawable-25.1.0.aar:/Users/baidu/Library/Android/sdk/extras/android/m2repository/com/android/support/transition/25.1.0/transition-25.1.0.aar:/Users/baidu/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/18.0/cce0823396aa693798f8882e64213b1772032b09/guava-18.0.jar:/Users/baidu/Library/Android/sdk/extras/android/m2repository/com/android/support/support-compat/25.1.0/support-compat-25.1.0.aar:/Users/baidu/Library/Android/sdk/extras/android/m2repository/com/android/support/support-media-compat/25.1.0/support-media-compat-25.1.0.aar:/Users/baidu/Library/Android/sdk/extras/android/m2repository/com/android/support/support-core-utils/25.1.0/support-core-utils-25.1.0.aar:/Users/baidu/Library/Android/sdk/extras/android/m2repository/com/android/support/support-core-ui/25.1.0/support-core-ui-25.1.0.aar:/Users/baidu/Library/Android/sdk/extras/android/m2repository/com/android/support/support-fragment/25.1.0/support-fragment-25.1.0.aar:/Users/baidu/Library/Android/sdk/extras/android/m2repository/com/android/support/recyclerview-v7/25.1.0/recyclerview-v7-25.1.0.aar"
+        }
+    },
+    "apt_libraries": {
+        "dagger": false,
+        "butterknife": true
+    },
+    "auto_dependency": true,
+    "build_cache_dir": "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/build/freeline",
+    "build_directory": "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/build",
+    "build_script": "./gradlew :HomeModule:assembleDebug",
+    "build_script_work_directory": "",
+    "build_tools_directory": "/Users/baidu/Library/Android/sdk/build-tools/25.0.2",
+    "build_tools_version": "25.0.2",
+    "compile_sdk_directory": "/Users/baidu/Library/Android/sdk/platforms/android-25",
+    "compile_sdk_version": "android-25",
+    "databinding": [
+        
+    ],
+    "databinding_compiler_jar": "",
+    "databinding_modules": [
+        
+    ],
+    "debug_package": "com.dianxinos.optimizer",
+    "exclude_dep_res_paths": [
+        
+    ],
+    "extra_dep_res_paths": [
+        
+    ],
+    "freeline_cache_dir": "/Users/baidu/StudioProjects/recycleview/RecycleFeed",
+    "freeline_gradle_plugin_version": "0.8.5",
+    "ignore_resource_ids": [
+        "avd_hide_password_1",
+        "avd_hide_password_2",
+        "avd_hide_password_3",
+        "avd_show_password_1",
+        "avd_show_password_2",
+        "avd_show_password_3"
+    ],
+    "java_home": "/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home",
+    "launcher": "com.dianxinos.optimizer.MainActivity",
+    "main_assets_directory": [
+        "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/debug/assets",
+        "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/main/assets"
+    ],
+    "main_jniLibs_directory": [
+        "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/debug/jniLibs",
+        "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/main/jniLibs"
+    ],
+    "main_jni_directory": [
+        "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/debug/jni",
+        "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/main/jni"
+    ],
+    "main_manifest_path": "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/main/AndroidManifest.xml",
+    "main_project_dir": "HomeModule",
+    "main_project_name": "HomeModule",
+    "main_r_path": "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/build/generated/source/r/debug/R.java",
+    "main_res_directory": [
+        "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/debug/res",
+        "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/main/res"
+    ],
+    "main_src_directory": [
+        "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/debug/java",
+        "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/main/java"
+    ],
+    "module_dependencies": {
+        "HomeModule": [
+            
+        ]
+    },
+    "modules": [
+        {
+            "name": "HomeModule",
+            "path": "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule"
+        }
+    ],
+    "package": "com.dianxinos.optimizer",
+    "product_flavor": "",
+    "project_source_sets": {
+        "HomeModule": {
+            "main_assets_directory": [
+                "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/debug/assets",
+                "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/main/assets"
+            ],
+            "main_jniLibs_directory": [
+                "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/debug/jniLibs",
+                "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/main/jniLibs"
+            ],
+            "main_jni_directory": [
+                "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/debug/jni",
+                "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/main/jni"
+            ],
+            "main_manifest_path": "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/main/AndroidManifest.xml",
+            "main_res_directory": [
+                "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/debug/res",
+                "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/main/res"
+            ],
+            "main_src_directory": [
+                "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/debug/java",
+                "/Users/baidu/StudioProjects/recycleview/RecycleFeed/HomeModule/src/main/java"
+            ]
+        }
+    },
+    "project_type": "gradle",
+    "retrolambda": {
+        
+    },
+    "root_dir": "/Users/baidu/StudioProjects/recycleview/RecycleFeed",
+    "sdk_directory": "/Users/baidu/Library/Android/sdk",
+    "use_jdk8": true
+}

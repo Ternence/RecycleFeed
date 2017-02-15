@@ -41,6 +41,7 @@ repositories {
 
 
 apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.antfortune.freeline'
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
